@@ -89,11 +89,12 @@
     visibility: visible;
 }
 
-/* 側邊欄 */
+/* 側邊欄：從左側滑出 */
 .side-menu {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
+    right: auto;
     z-index: 1050;
 
     width: min(82vw, 320px);
@@ -105,10 +106,12 @@
     flex-direction: column;
 
     background: #1b1b1f;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: -18px 0 40px rgba(0, 0, 0, 0.35);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none;
+    box-shadow: 18px 0 40px rgba(0, 0, 0, 0.35);
 
-    transform: translateX(100%);
+    /* 收合時移到畫面左側外 */
+    transform: translateX(-100%);
     visibility: hidden;
 
     transition:
@@ -116,6 +119,7 @@
         visibility 0.28s ease;
 }
 
+/* 展開時滑入畫面 */
 .side-menu.active {
     transform: translateX(0);
     visibility: visible;
