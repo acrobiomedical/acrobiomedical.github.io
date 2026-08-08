@@ -150,7 +150,68 @@
     </style>
 </head>
 <body>
+    
+    <!-- 側邊欄開啟按鈕 -->
+<button
+    class="menu-toggle"
+    id="menuToggle"
+    type="button"
+    aria-label="開啟網站選單"
+    aria-controls="sideMenu"
+    aria-expanded="false"
+>
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 
+<!-- 側邊欄遮罩 -->
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<!-- 側邊欄 -->
+<aside
+    class="side-menu"
+    id="sideMenu"
+    aria-label="網站導覽"
+>
+    <div class="side-menu-header">
+        <h2>網站選單</h2>
+
+        <button
+            class="menu-close"
+            id="menuClose"
+            type="button"
+            aria-label="關閉網站選單"
+        >
+            ×
+        </button>
+    </div>
+
+    <nav class="side-nav">
+        <a
+            href="https://acrobiomedical.github.io/feedback/anonymous.html"
+            class="side-nav-link"
+        >
+            <span class="nav-icon">✉</span>
+            <span>匿名回饋</span>
+        </a>
+
+        <a
+            href="https://docs.google.com/spreadsheets/d/10wcX7lZlvHirA2MdlnwU3S6FHVgeGDCoMPRfG6qWhx4/edit?gid=1880627299#gid=1880627299"
+            class="side-nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <span class="nav-icon">▤</span>
+            <span>製程數據</span>
+        </a>
+    </nav>
+
+    <div class="side-menu-footer">
+        kcyeap
+    </div>
+</aside>
+    
     <div class="container">
         <div class="profile-avatar">
             <img src="260302.jpg" alt="kcyeap Avatar">
