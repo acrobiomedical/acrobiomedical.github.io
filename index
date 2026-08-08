@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kcyeap</title>
+    <meta name="description" content="kcyeap 首頁，提供匿名回饋與製程數據入口">
+    <meta name="robots" content="noindex, nofollow">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                "Helvetica Neue",
+                Arial,
+                sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            min-height: 100%;
+            background: #121214;
+        }
+
+        body {
+            min-width: 320px;
+            min-height: 100vh;
+            min-height: 100dvh;
+            padding: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:
+                radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 38%),
+                #121214;
+            color: #e2e8f0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            padding: 42px 28px 32px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-avatar {
+            width: 92px;
+            height: 92px;
+            margin: 0 auto 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: #000;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-size: 1.55rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            margin-bottom: 28px;
+            color: #94a3b8;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            margin-bottom: 14px;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-align: left;
+            padding-left: 4px;
+            letter-spacing: 0.4px;
+        }
+
+        .link-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-card {
+            min-height: 64px;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            text-decoration: none;
+            color: #e2e8f0;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            transition:
+                transform 0.2s ease,
+                background-color 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .link-card:hover,
+        .link-card:focus-visible {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.16);
+            outline: none;
+        }
+
+        .link-card-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            min-width: 0;
+            text-align: left;
+        }
+
+        .link-icon {
+            width: 28px;
+            height: 28px;
+            flex: 0 0 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 1.15rem;
+        }
+
+        .link-text {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .link-title {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        .link-desc {
+            margin-top: 4px;
+            color: #94a3b8;
+            font-size: 0.78rem;
+            line-height: 1.35;
+        }
+
+        .link-arrow {
+            flex: 0 0 auto;
+            color: #64748b;
+            font-size: 1.05rem;
+        }
+
+        .footer {
+            margin-top: 28px;
+            color: #475569;
+            font-size: 0.72rem;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 36px 20px 28px;
+            }
+
+            .link-card {
+                min-height: 62px;
+                padding: 0 14px;
+            }
+
+            .link-title {
+                font-size: 0.98rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="profile-avatar">
+            <img src="260302.jpg" alt="kcyeap 頭像">
+        </div>
+
+        <h1>kcyeap</h1>
+
+        <div class="subtitle">
+            匿名回饋、職場建議、匿名告解、宣洩不滿、製程資訊入口
+        </div>
+
+        <div class="section-title">快速前往</div>
+
+        <nav class="link-list" aria-label="主要連結">
+            <a
+                class="link-card"
+                href="https://acrobiomedical.github.io/feedback/anonymous.html"
+                aria-label="前往匿名回饋"
+            >
+                <div class="link-card-left">
+                    <div class="link-icon" aria-hidden="true">✉</div>
+                    <div class="link-text">
+                        <div class="link-title">匿名回饋</div>
+                        <div class="link-desc">送出匿名留言、建議與回饋</div>
+                    </div>
+                </div>
+                <div class="link-arrow" aria-hidden="true">›</div>
+            </a>
+
+            <a
+                class="link-card"
+                href="https://docs.google.com/spreadsheets/d/10wcX7lZlvHirA2MdlnwU3S6FHVgeGDCoMPRfG6qWhx4/edit?gid=1880627299#gid=1880627299"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="前往製程數據"
+            >
+                <div class="link-card-left">
+                    <div class="link-icon" aria-hidden="true">▤</div>
+                    <div class="link-text">
+                        <div class="link-title">製程數據</div>
+                        <div class="link-desc">查看試算表與製程資料</div>
+                    </div>
+                </div>
+                <div class="link-arrow" aria-hidden="true">›</div>
+            </a>
+        </nav>
+
+        <div class="footer">© 2026 kcyeap. ALL RIGHTS RESERVED.</div>
+    </main>
+</body>
+</html>
