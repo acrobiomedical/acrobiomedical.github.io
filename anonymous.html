@@ -378,62 +378,6 @@ body.menu-open {
         }
     </style>
 </head>
-    
-    <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const sideMenu = document.getElementById("sideMenu");
-    const menuOverlay = document.getElementById("menuOverlay");
-    const menuClose = document.getElementById("menuClose");
-    const sideNavLinks = document.querySelectorAll(".side-nav-link");
-
-    function openMenu() {
-        sideMenu.classList.add("active");
-        menuOverlay.classList.add("active");
-        menuToggle.classList.add("active");
-        document.body.classList.add("menu-open");
-
-        menuToggle.setAttribute("aria-expanded", "true");
-        menuToggle.setAttribute("aria-label", "關閉網站選單");
-
-        menuClose.focus();
-    }
-
-    function closeMenu() {
-        sideMenu.classList.remove("active");
-        menuOverlay.classList.remove("active");
-        menuToggle.classList.remove("active");
-        document.body.classList.remove("menu-open");
-
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "開啟網站選單");
-
-        menuToggle.focus();
-    }
-
-    menuToggle.addEventListener("click", () => {
-        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-
-        if (isOpen) {
-            closeMenu();
-        } else {
-            openMenu();
-        }
-    });
-
-    menuClose.addEventListener("click", closeMenu);
-    menuOverlay.addEventListener("click", closeMenu);
-
-    sideNavLinks.forEach((link) => {
-        link.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            closeMenu();
-        }
-    });
-</script>
-    
 <body>
     
     <!-- 側邊欄開啟按鈕 -->
@@ -525,6 +469,61 @@ body.menu-open {
         <div class="footer">© 2026 kcyeap. ALL RIGHTS RESERVED.</div>
     </div>
 
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const sideMenu = document.getElementById("sideMenu");
+    const menuOverlay = document.getElementById("menuOverlay");
+    const menuClose = document.getElementById("menuClose");
+    const sideNavLinks = document.querySelectorAll(".side-nav-link");
+
+    function openMenu() {
+        sideMenu.classList.add("active");
+        menuOverlay.classList.add("active");
+        menuToggle.classList.add("active");
+        document.body.classList.add("menu-open");
+
+        menuToggle.setAttribute("aria-expanded", "true");
+        menuToggle.setAttribute("aria-label", "關閉網站選單");
+
+        menuClose.focus();
+    }
+
+    function closeMenu() {
+        sideMenu.classList.remove("active");
+        menuOverlay.classList.remove("active");
+        menuToggle.classList.remove("active");
+        document.body.classList.remove("menu-open");
+
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "開啟網站選單");
+
+        menuToggle.focus();
+    }
+
+    menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    menuClose.addEventListener("click", closeMenu);
+    menuOverlay.addEventListener("click", closeMenu);
+
+    sideNavLinks.forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeMenu();
+        }
+    });
+</script>
+    
 </body>
     </html>
     
