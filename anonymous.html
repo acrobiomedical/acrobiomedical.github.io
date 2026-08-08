@@ -162,9 +162,11 @@
         .side-menu-header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding-bottom: 22px;
+            justify-content: flex-start;
+            gap: 12px;
+            padding: 4px 0 22px 58px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
         }
 
         .side-menu-header h2 {
@@ -172,6 +174,7 @@
             font-size: 1.15rem;
             font-weight: 600;
             letter-spacing: 0.5px;
+            line-height: 1;
         }
 
         .side-nav {
@@ -372,6 +375,10 @@
                 width: min(86vw, 320px);
             }
 
+            .side-menu-header {
+                padding: 4px 0 22px 58px;
+            }
+
             .container {
                 margin-top: 42px;
                 padding: 38px 22px;
@@ -390,8 +397,8 @@
         }
     </style>
 </head>
-
 <body>
+
     <button
         class="menu-toggle"
         id="menuToggle"
